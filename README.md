@@ -1,3 +1,3 @@
-# MERN-Stack Infrastructure
+# STAY ON TARGET
 
-Clone this repo to provide the starter code for a comprehensive MERN-Stack project including token-based authentication.
+This is the repository for my project 4 MERN-Stack app called Stay on Target. It is a fitness and diet tracker based app where you may schedule workouts and track your daily calorie intake to better optimize your fitness journey all in one place.
