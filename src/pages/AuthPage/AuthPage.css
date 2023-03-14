@@ -15,10 +15,22 @@
   }
 
   h3 {
-    border: 2px solid black;
+    border: .1vmin solid var(--tan-2);
     display: flex;
     display: inline;
     padding: 5px 10px;
-    border-radius: 10px;
-    background-color: rgb(255, 214, 209);
+    border-radius: .5vmin;
+    background-color: #fba3a3;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-size: 2vmin;
+    font-weight: bold;
+    margin: 1vmin;
+    padding: 1vmin 4vmin;
+  
+  }
+
+  h3:hover {
+    background-color: rgb(255, 62, 62);
   }

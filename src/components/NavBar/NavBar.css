@@ -1,0 +1,28 @@
+.navbar {
+    color: red;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-end: auto;
+  
+}
+
+a {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    text-decoration: none;
+    color: black;
+
+}
+
+a:hover {
+    color: rgb(164, 58, 58);
+}
+
+.logo {
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: rotate(180deg);
+}

@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 import * as userService from '../../utilities/users-service' 
-import { Stack } from '@mui/material'
+import { Stack, Typography } from '@mui/material'
 import Logo from '../../assets/Logo/logo.png';
+import "./NavBar.css"
 
 
 export default function NavBar({ user, setUser }) {
@@ -20,7 +21,7 @@ export default function NavBar({ user, setUser }) {
             px="20px"
         >
             <Link to="/">
-                <img src={Logo} alt="logo" style={{ width: '100px', height: '100px', margin: '10px 20px' }} />
+                <img src={Logo} alt="logo" class="logo" style={{ width: '100px', height: '100px'}} />
             </Link>
             <Stack
                 direction="row"
@@ -29,11 +30,13 @@ export default function NavBar({ user, setUser }) {
                 fontSize="24px"
                 alignItems="flex-end"
             >
-                <Link to="/" style={{ textDecoration: 'none', color: '#3A1212', borderBottom: '3px solid #FF2625' }}>Home</Link>
-                <a href="#exercises" style={{ textDecoration: 'none', color: '#3A1212' }}>Exercises</a>
-                <Link to="/about">About</Link>
-                Welcome, {user.name}
-                <Link to="" onClick={handleLogOut}>Log Out</Link>            
+                <Typography class="navbar">
+                    <Link to="/exercises">Exercises</Link>
+                    <Link to="/calender">Calender</Link>
+                    <Link to="/about">About</Link>
+                    Welcome,&nbsp;{user.name}
+                    <Link to="" onClick={handleLogOut}>Log&nbsp;Out</Link>            
+                </Typography>
             </Stack>   
         </Stack>
     )

@@ -69,14 +69,18 @@ body {
   font-size: 25px;
   border-radius: 4px;
   position: absolute;
-  bottom: -20px;
-  right: 80px;
+  bottom: -25px;
+  right: 17px;
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
 }
 
 .right-arrow {
-  right: 140px;
+  right: auto;
+}
+
+.left-arrow {
+  left: auto;
 }
 
 .right-arrow:hover,
@@ -88,6 +92,11 @@ body {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  background-color: rgba(245, 245, 245, 0.712);
+  padding-top: 15px;
+  border-radius: .5vmin;
+  border: .1vmin solid rgb(218, 218, 218);
+
 }
 
 .detail-image {
@@ -95,28 +104,19 @@ body {
   height: 742px;
 }
 
-.hero-banner-img {
-  position: absolute;
-  right: 40px;
-  top: 0px;
-  width: 700px;
-  height: 900px;
-  margin-top: -330px;
-
-}
-
 .exercise-card {
   width: 400px;
-  height: 445px;
+  height: 500px;
   background: #fff;
-  border-top: 4px solid #FF2625;
-  border-bottom-left-radius: 20px;
+  border-top: 8px solid #ff2625;
+  border-bottom: 8px solid #ff2625;
+  border-radius: .5vmin;
   text-decoration: none;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   padding-bottom: 10px;
-  transform: scale(1, 1);
+  transform: scale(1.1, 1);
   transition: 0.3s all ease-in-out;
 }
 
@@ -131,7 +131,7 @@ body {
 
 .exercise-card:hover,
 .bodyPart-card:hover {
-  transform: scale(1.1, 1.1);
+  transform: scale(0.9, 0.9);
 }
 
 .search-btn:hover {
