@@ -22,6 +22,7 @@ Getting Started:
 -Trello:
   https://trello.com/b/EEEryhpt/stay-on-target
 -Heroku:
+  https://git.heroku.com/stay-on-target.git
 
 Future Enhancements:
 -Add a nutrition and calorie tracker
