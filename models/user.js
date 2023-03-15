@@ -16,6 +16,24 @@ const userSchema = new Schema({
     password: {
       type: String,
       required: true
+    },
+    height: { 
+        type: Number,
+        min: 50,
+        max: 250
+    },
+    weight: { 
+        type: Number,
+        min: 20,
+        max: 300
+    },
+    bodytype: { 
+        type: String, 
+        enum: ['thin', 'slim', 'average', 'athletic', 'muscular']
+    },
+    gender: { 
+        type: String, 
+        enum: ['male', 'female']
     }
 }, {
     timestamps: true,

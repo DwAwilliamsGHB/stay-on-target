@@ -9,8 +9,9 @@ import NavBar from '../../components/NavBar/NavBar'
 import Home from '../Home/Home';
 import ExercisePage from '../ExercisePage/ExercisePage';
 import ExerciseDetail from '../ExerciseDetail/ExerciseDetail';
-import Calender from '../Calender/Calender';
+import CalendarPage from '../Calendar/Calendar';
 import About from '../About/About';
+import UserPage from '../../pages/UserPage/UserPage'
 import Footer from '../../components/Footer/Footer';
 
 export default function App() {
@@ -25,8 +26,9 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/exercises" element={<ExercisePage />} />
-            <Route path="/calender" element={<Calender />} />
+            <Route path="/calendar" element={<CalendarPage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/goals" element={<UserPage />} />
             <Route path="/exercise/:id" element={< ExerciseDetail />}/>
           </Routes>
           <Footer/>

@@ -1,0 +1,152 @@
+html,
+body,
+body > div { /* the react root */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+ul {
+  margin: 0;
+  padding: 0 0 0 1.5em;
+}
+
+li {
+  margin: 1.5em 0;
+  padding: 0;
+}
+
+b { /* used for event dates/times */
+  margin-right: 3px;
+}
+
+.calendar-comp {
+  display: flex;
+  min-height: 100%;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.calendar-comp-sidebar {
+  margin-top: 97px;
+  width: 280px;
+  height: 817px;
+  line-height: 1;
+  padding-top: 30px;
+  background: rgb(250, 203, 203);
+  border-top: 5px solid #fd1b1b;
+  border-bottom: 5px solid #fd1b1b;
+  border-right: 5px solid #fd1b1b;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.calendar-comp-sidebar-section {
+  padding: 2em;
+}
+
+.calendar-comp-main {
+  flex-grow: 1;
+  padding: 3em;
+}
+
+.fc { /* the calendar root */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logoCal {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 5px;
+  border: 5px solid #fb1313;
+}
+
+:root {
+  --fc-border-color: rgb(251, 14, 14);
+  --fc-daygrid-event-dot-width: 5px;
+}
+
+.fc-direction-ltr {
+  background-color: #f4c7c7;
+  border-radius: 5px;
+  padding: 20px;
+  border: 5px solid #fb1313;
+}
+
+.fc-button-group>.fc-button {
+  background-color: #ffffff;
+  border: 2px solid #fb1313;
+  color: #fb1313;
+}
+.fc .fc-button-primary:disabled {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  opacity: .5;
+  border: 2px solid #fb1313;
+}
+
+.fc .fc-button-primary {
+  background-color: rgb(255, 255, 255);
+  color: #fb1313;
+  opacity: 1;
+  border: 2px solid #fb1313;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  background-color: #fb1313;
+  border: 2px solid #fb1313;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active:focus {
+  box-shadow: 0 0 0 0.2rem rgb(76 91 106 / 0%);
+}
+
+.fc-day {
+  background-color: white;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: rgb(255, 193, 193);
+  opacity: 1;
+}
+
+.fc .fc-daygrid .fc-day-future {
+  background-color: rgb(252, 161, 161);
+}
+
+.fc-event-main, .fc-event {
+  background-color: #fb1313;
+  border: 2px solid #fb1313;
+}
+
+.fc-timegrid-event-harness-inset .fc-timegrid-event {
+  box-shadow: 0 0 0 1px red;
+  margin: 3px 1px;
+}
+
+.fc-scrollgrid-liquid .fc-scrollgrid {
+  background-color: #f4c7c7;
+}
+
+.ant-btn {
+  background-color: rgb(255, 255, 255);
+  color: #fb1313;
+}
+
+:where(.css-dev-only-do-not-override-ph9edi).ant-modal .ant-modal-content {
+  border: 3px solid #fb1313;
+  background-color: #fffbfb;
+}
+
+:where(.css-dev-only-do-not-override-ph9edi).ant-btn-primary {
+  color: #fff;
+  background-color:#fb1313
+}
+
+
+

@@ -85,6 +85,14 @@ code {
   border-radius: 1vmin;
 }
 
+.form-container-about {
+  margin: 3vmin 30vmin;
+  padding: 5vmin 2vmin;
+  background-color: var(--tan-1);
+  border: .1vmin solid var(--tan-3);
+  border-radius: 1vmin;
+}
+
 p.error-message {
   color: var(--orange);
   text-align: center;

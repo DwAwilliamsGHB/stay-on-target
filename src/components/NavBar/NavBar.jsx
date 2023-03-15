@@ -32,9 +32,10 @@ export default function NavBar({ user, setUser }) {
             >
                 <Typography class="navbar">
                     <Link to="/exercises">Exercises</Link>
-                    <Link to="/calender">Calender</Link>
+                    <Link to="/calendar">Calendar</Link>
                     <Link to="/about">About</Link>
-                    Welcome,&nbsp;{user.name}
+                    <p>Welcome,&nbsp;{user.name}</p>
+                    <Link to="/goals">My Goals</Link>
                     <Link to="" onClick={handleLogOut}>Log&nbsp;Out</Link>            
                 </Typography>
             </Stack>   
