@@ -54,7 +54,7 @@ export default class CalendarComp extends React.Component {
     return (
       <div className='calendar-comp-sidebar'>
         <div className='calendar-comp-sidebar-section'>
-        <img src={icon} alt="logo" class="logoCal" style={{ width: '150px', height: '150px'}} />
+        <img src={icon} alt="logo" className="logoCal" style={{ width: '150px', height: '150px'}} />
         </div>
         <div className='calendar-comp-sidebar-section'>
           <h2>Planned workouts and Future Goals ({this.state.currentEvents.length})</h2>

@@ -28,3 +28,10 @@ a:hover {
 .logo:hover {
     transform: rotate(180deg);
 }
+
+h1 {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    margin-right: 25px;
+}

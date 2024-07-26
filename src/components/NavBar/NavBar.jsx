@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import * as userService from '../../utilities/users-service' 
-import { Stack, Typography } from '@mui/material'
+import { Stack } from '@mui/material'
 import Logo from '../../assets/Logo/logo.png';
 import "./NavBar.css"
 
@@ -21,7 +21,7 @@ export default function NavBar({ user, setUser }) {
             px="20px"
         >
             <Link to="/">
-                <img src={Logo} alt="logo" class="logo" style={{ width: '100px', height: '100px'}} />
+                <img src={Logo} alt="logo" className="logo" style={{ width: '100px', height: '100px'}} />
             </Link>
             <Stack
                 direction="row"
@@ -30,14 +30,14 @@ export default function NavBar({ user, setUser }) {
                 fontSize="24px"
                 alignItems="flex-end"
             >
-                <Typography class="navbar">
+                <div className="navbar">
                     <Link to="/exercises">Exercises</Link>
                     <Link to="/calendar">Calendar</Link>
                     <Link to="/about">About</Link>
-                    <p>Welcome,&nbsp;{user.name}</p>
+                    <h1>Welcome,&nbsp;{user.name}</h1>
                     <Link to="/goals">My Goals</Link>
                     <Link to="" onClick={handleLogOut}>Log&nbsp;Out</Link>            
-                </Typography>
+                </div>
             </Stack>   
         </Stack>
     )

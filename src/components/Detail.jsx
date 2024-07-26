@@ -36,10 +36,10 @@ const Detail = ({ exerciseDetail }) => {
           of the best <br /> exercises to target your {target}. It will help you improve your{' '}
           <br /> mood and gain energy.
         </Typography>
-        {extraDetail?.map((item) => (
-          <Stack key={item.name} direction="row" gap="24px" alignItems="center">
+        {extraDetail?.map((item, index) => (
+          <Stack key={index} direction="row" gap="24px" alignItems="center">
             <Button sx={{ background: '#FFF2DB', borderRadius: '50%', width: '100px', height: '100px' }}>
-              <img src={item.icon} alt={bodyPart} style={{ width: '50px', height: '50px' }} />
+              <img src={item.icon} alt={item.name} style={{ width: '50px', height: '50px' }} />
             </Button>
             <Typography textTransform="capitalize" sx={{ fontSize: { lg: '30px', xs: '20px' } }}>
               {item.name}

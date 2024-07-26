@@ -32,8 +32,8 @@ export default function UserPage() {
   };
 
   return (
-    <div class="container">
-      <form onSubmit={handleSubmit} class="form-container-about" >
+    <div className="container">
+      <form onSubmit={handleSubmit} className="form-container-about" >
         <label>
           <span>Target&nbsp;Exercise:</span>
           <input type="text" value={exerciseName} onChange={(event) => setExerciseName(event.target.value)} />
@@ -46,11 +46,11 @@ export default function UserPage() {
           <span>Target&nbsp;Reps:</span>
           <input type="text" value={reps} onChange={(event) => setReps(event.target.value)} />
         </label>
-        <div class="btn">
+        <div className="btn">
           <button type="submit">Add&nbsp;Goal</button>
         </div>
       </form>
-      <div class="goals">
+      <div className="goals">
         <h2>My Goals</h2>
         <ul>
           {goals.map((goal, index) => (

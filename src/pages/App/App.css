@@ -37,19 +37,15 @@
   }
 }
 
-
-
 body {
   font-family: 'Josefin Sans';
   background-color: #FFFAFB;
-  /* background-color: #282c34; */
 }
 
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-
 }
 
 ::-webkit-scrollbar {
@@ -68,35 +64,12 @@ body {
   color: #FF2625;
   font-size: 25px;
   border-radius: 4px;
-  position: absolute;
-  bottom: -25px;
-  right: 17px;
-  transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
-}
-
-.right-arrow {
-  right: auto;
-}
-
-.left-arrow {
-  left: auto;
 }
 
 .right-arrow:hover,
 .left-arrow:hover {
   transform: scale(1.3, 1.3);
-}
-
-.react-horizontal-scrolling-menu--wrapper {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: rgba(245, 245, 245, 0.712);
-  padding-top: 15px;
-  border-radius: .5vmin;
-  border: .1vmin solid rgb(218, 218, 218);
-
 }
 
 .detail-image {
@@ -110,7 +83,7 @@ body {
   background: #fff;
   border-top: 8px solid #ff2625;
   border-bottom: 8px solid #ff2625;
-  border-radius: .5vmin;
+  border-radius: 0.5vmin;
   text-decoration: none;
   display: flex;
   justify-content: space-between;
@@ -118,6 +91,7 @@ body {
   padding-bottom: 10px;
   transform: scale(1.1, 1);
   transition: 0.3s all ease-in-out;
+  display: inline-block; /* Ensure cards are inline */
 }
 
 .exercise-card img {
@@ -127,6 +101,7 @@ body {
 .bodyPart-card {
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
+  display: inline-block; /* Ensure body part cards are inline */
 }
 
 .exercise-card:hover,
@@ -148,15 +123,10 @@ body {
   text-decoration: none;
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width: 1200px) {
   .detail-image {
     width: 300px;
     height: 300px;
-  }
-
-
-  .react-horizontal-scrolling-menu--scroll-container {
-    width: 500px;
   }
 
   .left-arrow,
@@ -176,10 +146,9 @@ body {
     width: 320px;
     height: 300px;
   }
-
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width: 400px) {
   .exercise-card {
     width: 280px;
   }
