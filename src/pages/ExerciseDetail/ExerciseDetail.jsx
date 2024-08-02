@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Box } from '@mui/material';
-
-import { exerciseOptions, fetchData, youtubeOptions } from '../../utilities/fetch-data';
+import { exerciseOptions, fetchData, youtubeOptions, fetchAllExercises } from '../../utilities/fetch-data';
 import Detail from '../../components/Detail';
 import ExerciseVideos from '../../components/ExerciseVideos';
 import SimilarExercises from '../../components/SimilarExercises.jsx';
@@ -27,11 +26,11 @@ const ExerciseDetail = () => {
       const exerciseVideosData = await fetchData(`${youtubeSearchUrl}/search?query=${exerciseDetailData.name} exercise`, youtubeOptions);
       setExerciseVideos(exerciseVideosData.contents);
 
-      const targetMuscleExercisesData = await fetchData(`${exerciseDbUrl}/exercises/target/${exerciseDetailData.target}`, exerciseOptions);
+      const targetMuscleExercisesData = await fetchData(`${exerciseDbUrl}/exercises/target/${exerciseDetailData.target}?limit=0`, exerciseOptions);
       setTargetMuscleExercises(targetMuscleExercisesData);
 
-      const equimentExercisesData = await fetchData(`${exerciseDbUrl}/exercises/equipment/${exerciseDetailData.equipment}`, exerciseOptions);
-      setEquipmentExercises(equimentExercisesData);
+      const equipmentExercisesData = await fetchData(`${exerciseDbUrl}/exercises/equipment/${exerciseDetailData.equipment}?limit=0`, exerciseOptions);
+      setEquipmentExercises(equipmentExercisesData);
     };
 
     fetchExercisesData();

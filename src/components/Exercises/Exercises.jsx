@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Pagination from '@mui/material/Pagination';
 import { Box, Stack, Typography } from '@mui/material';
-
-import { exerciseOptions, fetchData } from '../../utilities/fetch-data';
+import { fetchAllExercises, fetchData, exerciseOptions } from '../../utilities/fetch-data';
 import ExerciseCard from '../ExerciseCard';
 import Loader from '../Loader';
 
@@ -15,9 +14,9 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       let exercisesData = [];
 
       if (bodyPart === 'all') {
-        exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+        exercisesData = await fetchAllExercises();
       } else {
-        exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
+        exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}?limit=0`, exerciseOptions);
       }
 
       setExercises(exercisesData);
@@ -26,14 +25,12 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     fetchExercisesData();
   }, [bodyPart, setExercises]);
 
-  // Pagination
   const indexOfLastExercise = currentPage * exercisesPerPage;
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
   const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
 
   const paginate = (event, value) => {
     setCurrentPage(value);
-
   };
 
   if (!currentExercises.length) return <Loader />;
@@ -47,7 +44,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         ))}
       </Stack>
       <Stack sx={{ mt: { lg: '114px', xs: '70px' } }} alignItems="center">
-        {exercises.length > 9 && (
+        {exercises.length > exercisesPerPage && (
           <Pagination
             color="standard"
             shape="rounded"
